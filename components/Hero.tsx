@@ -143,7 +143,7 @@ const Hero: React.FC = () => {
 
             {/* Zeus Character - positioned behind text */}
             <img 
-                src="/assets/images/Lawn_Zeus.png"
+                src="https://res.cloudinary.com/dkpp29hrv/image/upload/v1753052775/Lawn_Zeus_m9lkzg.png"
                 alt="Olympus god mowing a lawn on a hill"
                 className="absolute z-16 bottom-[-5vh] md:bottom-[-8vh] left-1/2 w-[48vw] max-w-[320px] md:max-w-[440px] lg:max-w-[520px]"
                 style={{ 
