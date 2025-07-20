@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Olympus Lawncare - Divine Care for Earthly Lawns</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Jost', 'sans-serif'],
+                        serif: ['Cinzel', 'serif'],
+                    },
+                    colors: {
+                        'olympus-green': {
+                            light: '#4CAF50',
+                            DEFAULT: '#2E7D32',
+                            dark: '#1B5E20',
+                            darkest: '#123814',
+                        },
+                        'olympus-gray': {
+                            light: '#F3F4F6',
+                            DEFAULT: '#6B7280',
+                            dark: '#1F2937',
+                        }
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                           '0%': { opacity: '0', transform: 'translateY(20px)' },
+                           '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        sway: {
+                            '0%, 100%': { transform: 'rotate(-2deg)' },
+                            '50%': { transform: 'rotate(2deg)' },
+                        },
+                         typewriter: {
+                          from: { width: '0' },
+                          to: { width: '100%' },
+                        },
+                        glow: {
+                            '0%, 100%': { boxShadow: '0 0 5px #4CAF50' },
+                            '50%': { boxShadow: '0 0 20px #4CAF50, 0 0 30px #4CAF50' },
+                        }
+                    },
+                    animation: {
+                        fadeInUp: 'fadeInUp 1s ease-out forwards',
+                        sway: 'sway 3s ease-in-out infinite alternate',
+                        typewriter: 'typewriter 4s steps(44) 1s 1 normal both',
+                        glow: 'glow 2.5s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react-intersection-observer": "https://esm.sh/react-intersection-observer@^9.16.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-olympus-gray-dark text-olympus-gray-light">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
