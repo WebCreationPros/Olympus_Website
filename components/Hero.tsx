@@ -113,7 +113,7 @@ const Hero: React.FC = () => {
             />
             {/* Layer 2: Distant Mountain Range */}
             <div 
-                className="absolute bottom-0 left-0 w-full h-[60%] z-11"
+                className="absolute bottom-0 left-0 w-full h-[50vh] sm:h-[55vh] md:h-[60vh] z-11"
                 style={{ transform: `translateY(${offsetY * 0.6}px)` }}
             >
                 <DistantMountainSVG className="w-full h-full" />
@@ -121,7 +121,7 @@ const Hero: React.FC = () => {
 
             {/* Layer 3: Middle Mountain Range */}
             <div 
-                className="absolute bottom-0 left-0 w-full h-[55%] z-12"
+                className="absolute bottom-0 left-0 w-full h-[45vh] sm:h-[50vh] md:h-[55vh] z-12"
                 style={{ transform: `translateY(${offsetY * 0.5}px)` }}
             >
                 <MiddleMountainSVG className="w-full h-full" />
@@ -132,10 +132,22 @@ const Hero: React.FC = () => {
                 className="absolute inset-0 z-13"
                 style={{ transform: `translateY(${offsetY * 0.4}px)` }}
             >
-                <Tree className="absolute w-40 bottom-[20%]" style={{ left: '5%', filter: 'blur(1px)', opacity: 0.8 }} />
-                <Tree className="absolute w-32 bottom-[10%]" style={{ left: '20%', filter: 'blur(1px)', opacity: 0.7 }} />
-                <Tree className="absolute w-48 bottom-[12%]" style={{ right: '8%', opacity: 0.8 }} />
-                <Tree className="absolute w-24 bottom-[10%]" style={{ right: '25%', filter: 'blur(1px)', opacity: 0.4 }} />
+                <Tree 
+                    className="absolute w-20 sm:w-32 md:w-40 bottom-[15vh] sm:bottom-[18vh] md:bottom-[20vh]" 
+                    style={{ left: '5%', filter: 'blur(1px)', opacity: 0.8 }} 
+                />
+                <Tree 
+                    className="absolute w-20 sm:w-24 md:w-32 bottom-[8vh] sm:bottom-[10vh] md:bottom-[12vh]" 
+                    style={{ left: '20%', filter: 'blur(1px)', opacity: 0.7 }} 
+                />
+                <Tree 
+                    className="absolute w-20 sm:w-36 md:w-48 bottom-[10vh] sm:bottom-[12vh] md:bottom-[15vh]" 
+                    style={{ right: '8%', opacity: 0.8 }} 
+                />
+                <Tree 
+                    className="absolute w-16 sm:w-20 md:w-24 bottom-[8vh] sm:bottom-[10vh] md:bottom-[12vh]" 
+                    style={{ right: '25%', filter: 'blur(1px)', opacity: 0.4 }} 
+                />
             </div>
 
             {/* Dark overlay for better text visibility */}
@@ -145,7 +157,7 @@ const Hero: React.FC = () => {
             <img 
                 src="https://res.cloudinary.com/dkpp29hrv/image/upload/v1753052775/Lawn_Zeus_m9lkzg.png"
                 alt="Olympus god mowing a lawn on a hill"
-                className="absolute z-16 bottom-[-5vh] md:bottom-[-8vh] left-1/2 w-[48vw] max-w-[320px] md:max-w-[440px] lg:max-w-[520px]"
+                className="absolute z-16 bottom-[+3vh] sm:bottom-[-2vh] md:bottom-[-2vh] left-1/2 w-[50vw] sm:w-[45vw] md:w-[40vw] max-w-[280px] sm:max-w-[350px] md:max-w-[450px]"
                 style={{ 
                     transform: `translateX(-65%) translateY(${offsetY * 0.25}px)`,
                     filter: 'drop-shadow(5px 5px 15px rgba(0,0,0,0.4))'
@@ -154,16 +166,16 @@ const Hero: React.FC = () => {
 
             {/* Background Hill Layer for 3D Effect */}
             <div 
-                className="absolute bottom-0 left-0 w-full h-[45%] z-14"
+                className="absolute bottom-0 left-0 w-full h-[40vh] sm:h-[42vh] md:h-[45vh] z-14"
                 style={{ transform: `translateY(${offsetY * 0.3}px)` }}
             >
                 <BackgroundHillSVG className="w-full h-full" />
             </div>
 
             {/* Foreground Content */}
-            <div className="relative z-20 text-center px-4 -mt-24 md:-mt-32">
+            <div className="relative z-20 text-center px-4 -mt-16 sm:-mt-20 md:-mt-24 lg:-mt-32">
                 <h1 
-                    className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold tracking-wider uppercase relative"
+                    className="font-serif text-2xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-wider uppercase relative"
                     style={{ 
                         color: '#ffffff',
                         textShadow: `
@@ -217,23 +229,48 @@ const Hero: React.FC = () => {
                         @keyframes big-o-intro {
                             0% {
                                 opacity: 0;
-                                transform: translate(0, 0) scale(4);
-                                filter: drop-shadow(0px 0px 40px rgba(255,255,255,1)) drop-shadow(0px 0px 60px rgba(76,175,80,0.8));
+                                transform: translate(0, 0) scale(3);
+                                filter: drop-shadow(0px 0px 30px rgba(255,255,255,1)) drop-shadow(0px 0px 40px rgba(76,175,80,0.8));
                             }
                             40% {
                                 opacity: 1;
-                                transform: translate(0, 0) scale(2.5);
-                                filter: drop-shadow(0px 0px 30px rgba(255,255,255,0.8)) drop-shadow(0px 0px 40px rgba(76,175,80,0.6));
+                                transform: translate(0, 0) scale(2);
+                                filter: drop-shadow(0px 0px 20px rgba(255,255,255,0.8)) drop-shadow(0px 0px 30px rgba(76,175,80,0.6));
                             }
                             70% {
                                 opacity: 1;
-                                transform: translate(-20px, 0) scale(1.5);
-                                filter: drop-shadow(0px 0px 15px rgba(255,255,255,0.5));
+                                transform: translate(-10px, 0) scale(1.3);
+                                filter: drop-shadow(0px 0px 10px rgba(255,255,255,0.5));
                             }
                             100% {
                                 opacity: 1;
                                 transform: translate(0, 0) scale(1);
                                 filter: none;
+                            }
+                        }
+                        
+                        @media (max-width: 640px) {
+                            @keyframes big-o-intro {
+                                0% {
+                                    opacity: 0;
+                                    transform: translate(0, 0) scale(2.5);
+                                    filter: drop-shadow(0px 0px 20px rgba(255,255,255,1)) drop-shadow(0px 0px 30px rgba(76,175,80,0.8));
+                                }
+                                40% {
+                                    opacity: 1;
+                                    transform: translate(0, 0) scale(1.8);
+                                    filter: drop-shadow(0px 0px 15px rgba(255,255,255,0.8)) drop-shadow(0px 0px 20px rgba(76,175,80,0.6));
+                                }
+                                70% {
+                                    opacity: 1;
+                                    transform: translate(-5px, 0) scale(1.2);
+                                    filter: drop-shadow(0px 0px 8px rgba(255,255,255,0.5));
+                                }
+                                100% {
+                                    opacity: 1;
+                                    transform: translate(0, 0) scale(1);
+                                    filter: none;
+                                }
                             }
                         }
 
@@ -256,7 +293,7 @@ const Hero: React.FC = () => {
                     ))}
                 </h1>
                 
-                <div className="mt-8 text-xl md:text-2xl mx-auto w-full max-w-2xl">
+                <div className="mt-4 sm:mt-6 md:mt-8 text-lg sm:text-xl md:text-2xl mx-auto w-full max-w-2xl px-2">
                    <p 
                         className="font-light tracking-wide opacity-0"
                         style={{ 
@@ -291,7 +328,7 @@ const Hero: React.FC = () => {
 
                 <a 
                     href="#contact" 
-                    className="mt-10 inline-block bg-olympus-green-light text-white font-bold text-lg py-4 px-10 rounded-full
+                    className="mt-6 sm:mt-8 md:mt-10 inline-block bg-olympus-green-light text-white font-bold text-sm sm:text-base md:text-lg py-3 sm:py-4 px-6 sm:px-8 md:px-10 rounded-full
                                transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl
                                border-2 border-transparent hover:border-white animate-glow"
                 >
@@ -301,15 +338,15 @@ const Hero: React.FC = () => {
 
             {/* Foreground Hill Layer */}
             <div 
-                className="absolute bottom-0 left-0 w-full h-[40%] z-40"
+                className="absolute bottom-0 left-0 w-full h-[35vh] sm:h-[38vh] md:h-[40vh] z-40"
                 style={{ transform: `translateY(${offsetY * 0.15}px)` }}
             >
                 <HillSVG className="w-full h-full" />
             </div>
 
             {/* Scroll down arrow */}
-             <div className="absolute bottom-10 z-50 left-1/2 -translate-x-1/2 animate-bounce">
-                <svg className="w-8 h-8 text-white opacity-90" style={{ filter: 'drop-shadow(0 0 5px rgba(0,0,0,0.5))' }} fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+             <div className="absolute bottom-6 sm:bottom-8 md:bottom-10 z-50 left-1/2 -translate-x-1/2 animate-bounce">
+                <svg className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white opacity-90" style={{ filter: 'drop-shadow(0 0 5px rgba(0,0,0,0.5))' }} fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                 </svg>
             </div>
